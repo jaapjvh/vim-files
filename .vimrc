@@ -12,6 +12,17 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdTree'
+Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'ervandew/supertab'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'dsawardekar/wordpress.vim'
+Plugin 'chrisgillis/vim-bootstrap3-snippets'
+" Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -32,8 +43,15 @@ syntax enable
 colorscheme codeschool 
 imap <C-Return> <CR><CR><C-o>k<Tab>
 set autoindent
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+set completeopt=longest,menuone
+
+au BufRead *.php set ft=php.html
+au BufNewFile *.php set ft=php.html
+
+set relativenumber
 
 " Relative or absolute number lines
 function! NumberToggle()
@@ -54,3 +72,30 @@ command! W  write
 let NERDSpaceDelims=1
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
+
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+nmap <c-s> :set nopaste<CR>:w<CR>
+imap <c-s> <Esc>:set nopaste<CR>:w<CR>
+
+" ctrl u voor url zonder http://www.domein-subdomein.nl, voor CSS o.a.
+nmap <F3> :%s/http.*wp-content/\/wp-content/g<CR>
+
+" Weergeef volledige bestandsnaam onderin
+set laststatus=2
+set statusline+=%F
+
+nmap <F4> :set ignorecase! ignorecase?
