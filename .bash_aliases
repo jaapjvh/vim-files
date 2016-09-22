@@ -1,3 +1,5 @@
 alias v='vim'
 alias infr='cd ~/subdomains/infradax/wp-content/themes/infradax'
+alias hm='cd ~/subdomains/happymelons/wp-content/themes/happymelons'
+alias btk='cd ~/subdomains/bijteunplatsform/wp-content/themes/Locations'
 alias wp='~/wp-cli.phar'

@@ -99,3 +99,5 @@ set laststatus=2
 set statusline+=%F
 
 nmap <F4> :set ignorecase! ignorecase?
+
+set autoread
