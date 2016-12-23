@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='ftp://f157541@ftp.d62914.cp.hostnet.nl/webspace/httpdocs/taalthuis.nl/e-learning/wp-content/themes/taalthuis/info/'
+let g:netrw_dirhist_2='ftp://f157541@ftp.d62914.cp.hostnet.nl/webspace/httpdocs/taalthuis.nl/e-learning/wp-content/themes/taalthuis/'
+let g:netrw_dirhist_3='ftp://md391802@ftp.ronell.nl/'
+let g:netrw_dirhist_4='ftp://md391802@ftp.ronell.nl/public/'
+let g:netrw_dirhist_5='ftp://md391802@ftp.ronell.nl/public/sites/'
+let g:netrw_dirhist_6='ftp://md391802@ftp.ronell.nl/public/sites/www.ronell.nl/'
+let g:netrw_dirhist_7='ftp://md391802@ftp.ronell.nl/public/sites/www.ronell.nl/wp-content/'
+let g:netrw_dirhist_8='ftp://md391802@ftp.ronell.nl/public/sites/www.ronell.nl/wp-content/themes/'
+let g:netrw_dirhist_9='ftp://md391802@ftp.ronell.nl/public/sites/www.ronell.nl/wp-content/themes/medicate/'

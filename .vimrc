@@ -18,10 +18,12 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'tpope/vim-markdown'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'dsawardekar/wordpress.vim'
 Plugin 'chrisgillis/vim-bootstrap3-snippets'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'uguu-org/vim-matrix-screensaver'
+Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
@@ -76,6 +78,7 @@ let g:NERDTreeDirArrowCollapsible="~"
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
@@ -101,3 +104,17 @@ set statusline+=%F
 nmap <F4> :set ignorecase! ignorecase?
 
 set autoread
+
+" fuzzy finder default current dir
+let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+nmap <F12> :Matrix<CR>
+
+nnoremap gq  :tabclose<CR>
+
+map nt :NERDTreeToggle<CR>
+
+" links toevoegen, active, hover, focus
+nnoremap ltv $r,Ygpbxxa:active,<Esc>Ygpbbciwfocus<Esc>Ygpbbciwhover<Esc>$ciw {
