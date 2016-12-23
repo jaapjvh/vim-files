@@ -1,0 +1,62 @@
+snippet the_query "WP_Query snippet"
+$args = array(
+		'posts_per_page' => -1,
+		'post_type' => '$1',
+	);
+
+$the_query = new WP_Query( $args );
+
+if( $the_query->have_posts() ) {
+
+	while( $the_query->have_posts() ) {
+
+		$the_query->the_post();
+
+	}
+
+	wp_reset_postdata();
+
+}
+endsnippet
+
+snippet prea "print_r true array met pre opmaak"
+print'<pre>'.print_r( $${1:array_verangen}, true ).'</pre>';
+endsnippet
+
+snippet trfe "Types render field echo" 
+<?=types_render_field('$1')?>
+endsnippet
+
+snippet trf "Types render field" 
+types_render_field('$1')
+endsnippet
+
+snippet vcsc "Visual Composer Shortcode element" 
+function ${1:naam}() {
+
+	$$1 = "Hier komt $1";
+	return $$1;
+
+}
+add_shortcode( '$1', '$1' );
+
+add_action( 'vc_before_init', '$1_vc' );
+function $1_vc() {
+
+	$args = array(
+			'name' => '$1 inladen',
+			'base' => '$1'
+		);
+
+	vc_map( $args );
+
+}
+endsnippet
+
+snippet ais "Add image size"
+add_image_size('$1', 208, 208, true);
+endsnippet
+
+snippet cl "console.log"
+console.log('$1');
+endsnippet
